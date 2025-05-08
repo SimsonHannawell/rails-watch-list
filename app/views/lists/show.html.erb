@@ -1,0 +1,6 @@
+<h1>Lists#show</h1>
+<p>Find me in app/views/lists/show.html.erb</p>
+<% @bookmarks.each do |bookmark| %>
+  <p><%= bookmark.movie.title %> - <%= bookmark.comment %></p>
+  <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
